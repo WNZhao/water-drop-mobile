@@ -1,10 +1,13 @@
 import { useMutation, useQuery } from '@apollo/client';
 import './App.css';
 import React, { useState } from 'react';
-import { Button, Calendar, Form, Input } from 'antd-mobile';
+import { Button, Calendar, Form, ImageUploader, Input } from 'antd-mobile';
 import { FIND, UPDATE } from './graphql/demo';
+import { useUploadOSS } from './hooks/useUploadOSS';
 
 function App() {
+  const uploadHandler = useUploadOSS();
+
   useState();
 
   const { loading, data } = useQuery(FIND, {
@@ -30,6 +33,7 @@ function App() {
   };
   return (
     <div>
+      <ImageUploader upload={uploadHandler} />
       <Calendar />
       <p>
         data:
