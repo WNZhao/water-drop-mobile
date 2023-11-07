@@ -1,19 +1,17 @@
-import { useEffect } from "react"
-import useLatest from "./useLatest";
+import { useEffect } from 'react';
+import useLatest from './useLatest';
 
 /**
  * 组件制裁时运行
- * @param fn 
- * @returns 
+ * @param fn
+ * @returns
  */
 
 const useUnmont = (fn: () => void) => {
-  const fnRef = useLatest(fn)
-  useEffect(() => {
-    return () => fnRef.current()
-  }, [])
+  const fnRef = useLatest(fn);
+  useEffect(() => () => fnRef.current(), []);
 
-  return ""
-}
+  return '';
+};
 
-export default useUnmont
+export default useUnmont;

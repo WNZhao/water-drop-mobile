@@ -1,17 +1,17 @@
-import { useEffect } from "react"
+import { useEffect } from 'react';
 
 /**
  * 组件加载时运行
- * @param fn 
- * @returns 
+ * @param fn
+ * @returns
  */
 
 const useMount = (fn: () => void) => {
   useEffect(() => {
-    fn?.()
-  }, [])
+    fn?.();
+  }, []);
 
-  return ""
-}
+  return '';
+};
 
-export default useMount
+export default useMount;

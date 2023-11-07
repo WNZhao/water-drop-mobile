@@ -25,6 +25,7 @@ module.exports = {
     'object-curly-newline': 0,
     'no-console': 0,
     'react/jsx-wrap-multilines': 0,
+    '@typescript-eslint/no-unused-expressions': 0,
     'react-hooks/exhaustive-deps': 1,
   },
   settings: {
