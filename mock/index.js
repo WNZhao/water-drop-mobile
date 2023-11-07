@@ -1,9 +1,8 @@
-
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { addMocksToSchema } from '@graphql-tools/mock';
 import { makeExecutableSchema } from '@graphql-tools/schema';
-import { faker } from "@faker-js/faker/locale/zh_CN"
+import { faker } from '@faker-js/faker/locale/zh_CN';
 
 const typeDefs = `#graphql
   type Query {
@@ -49,17 +48,15 @@ const resolvers = {
   UserType: {
     // name: () => faker.name.fullName()
     name: () => faker.person.fullName(),
-    desc:()=>faker.location.city()
+    desc: () => faker.location.city()
   }
 };
-
 
 const mocks = {
   Int: () => 6,
   Float: () => 22.1,
-  String: () => "hello"
+  String: () => 'hello'
 };
-
 
 const server = new ApolloServer({
   schema: addMocksToSchema({
