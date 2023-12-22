@@ -5,7 +5,6 @@ export const useUploadOSS = () => {
   // 1. 获取签名信息
   // 2. fetch post
   const { data: d } = useQuery(GET_OSS_INFO);
-  // console.log(data);
 
   const uploadHandler = async (file: File) => {
     const formData = new FormData();
