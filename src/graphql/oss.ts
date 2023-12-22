@@ -8,6 +8,7 @@ export const GET_OSS_INFO = gql`
       policy
       signature
       host
+      dir
     }
   }
 `;
